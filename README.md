@@ -1,12 +1,12 @@
 # SIEM Log Monitoring with Splunk
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates hands-on experience with SIEM log monitoring using Splunk, focusing on Linux SSH authentication logs. The goal is to simulate real-world SOC analyst activities such as log ingestion, failed login detection, brute force attack identification, alert creation, dashboard monitoring, and basic incident investigation.
 
 This project is designed for entry-level SOC Analyst roles and reflects tasks commonly performed in a Security Operations Center.
 
-## 🛠️ Tools & Technologies Used
+## Tools & Technologies Used
 
 Splunk Enterprise (Free License)
 
@@ -18,7 +18,7 @@ Linux Authentication Logs (/var/log/auth.log)
 
 VirtualBox / VMware (Virtual Lab)
 
-🧪 Lab Setup
+ Lab Setup
 Component	Description
 SIEM	Splunk Enterprise running on Ubuntu
 Log Source	Ubuntu Linux authentication logs
@@ -27,7 +27,7 @@ Attack Simulation	SSH failed login attempts
 Log File Monitored:
              /var/log/auth.log
              
-📥 Log Ingestion
+ Log Ingestion
 
 Configured Splunk to monitor Linux authentication logs
 
@@ -38,7 +38,7 @@ Validated logs using Splunk Search & Reporting
 Sample Search:
           index=main
           
-## 🚨 Detection Use Cases
+##  Detection Use Cases
 ### 1️⃣ Failed SSH Login Detection
 
 Detects unsuccessful SSH login attempts.
@@ -58,7 +58,7 @@ Query:
 | where count > 3
 
 
-## 🔔 Alert Configuration
+##  Alert Configuration
 
 Alert Name: Linux SSH Brute Force Attempt
 Trigger Condition: If results > 0
@@ -68,7 +68,7 @@ Expiration: 24 hours
 
 The alert triggers when multiple failed SSH login attempts are detected from a single source IP.
 
-## 📊 Dashboard: Linux SSH Security Monitoring
+##  Dashboard: Linux SSH Security Monitoring
 
 A Splunk dashboard was created to provide real-time visibility into SSH authentication activity.
 
@@ -87,7 +87,7 @@ index=main "Failed password"
 | sort - count
 
 
-## 🕵️ Incident Investigation Summary
+##  Incident Investigation Summary
 
 Incident Type: SSH Brute Force Attempt
 Severity: High
@@ -109,7 +109,7 @@ Affected System: Ubuntu Linux Server
 Status: No successful compromise detected
 
 
-## 🎯 Skills Demonstrated
+##  Skills Demonstrated
 
 SIEM log ingestion and monitoring
 
